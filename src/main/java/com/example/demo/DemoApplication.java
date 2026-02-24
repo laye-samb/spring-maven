@@ -9,5 +9,12 @@ public class DemoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 	}
+@RestController
+class HelloWorldController {
+    @GetMapping("/")
+    public String sayHello() {
+        return "Hello, World!";
+    }
+}
 
 }
